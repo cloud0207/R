@@ -75,3 +75,20 @@ exam[exam$class==1 | exam$math>=60,]
 # (열번호!) 변수명으로 변수 추출하기
 exam[,'class']
 exam[,c('class','math','english')]
+
+
+accident <- c(31,26,42,47,50,54,70,66,43,32,32,22)
+names(accident) <- c('m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12')
+month_50 <- accident[accident>=50]
+# month_50 엑셀로 저장(month_50.csv)
+# 엑셀로 저장하는 법
+## write.csv(변환하고자하는 데이터,'../data/mon.csv')
+write.csv(month_50,'../R_TEMP/data/mon.csv')
+# 뒤에 ,row.names=F하면 선택적 저장가능
+## read.csv(경로)
+# 확인하는 법(R로 불러오기)
+read.csv('../R_TEMP/data/mon.csv')
+# 휘발성이라, 항상 변수에 할당해줘야함
+m_csv <- read.csv('../R_TEMP/data/mon.csv')
+## View()함수 사용하여 엑셀처럼 표 불러오기
+View(m_csv)
