@@ -77,7 +77,12 @@ sum(condi)
 
 
 # <iris> dataset = 모두 대문자로 시작
+iris_m <- iris
+# 데이터 모두 소문자로 변경
+names(iris_m) <- tolower(names(iris_m))
+ls(iris_m)
 head(iris,6)
+# 행과 열의 개수 dim()
 dim(iris)
 # unique() =중복없이 출력
 # Ex.
