@@ -1,2 +1,2 @@
-# R-programming
+# R programming
 study R deeply
