@@ -73,6 +73,11 @@ na_df
 df1 <- subset(df,!is.na(sex) & !is.na(score))
 df1
 
+# select() : 원하는 열 가져오기
+# filter() : 조건에 맞게 가져오기
+# ' & ' = 모두 TRUE 여야 값 반환
+# ' | ' = 하나만 TRUE여도 값 반환
+
 
 
 # 회귀분석 = 종속/독립변수 둘다 양적변수여야됨
